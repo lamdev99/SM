@@ -1,0 +1,14 @@
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\bin\Debug\netstandard2.0\Substation.App.deps.json
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\bin\Debug\netstandard2.0\Substation.App.dll
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\bin\Debug\netstandard2.0\ref\Substation.App.dll
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\bin\Debug\netstandard2.0\Substation.App.pdb
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\Substation.App.csprojAssemblyReference.cache
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\View\MainTbaPage.xaml.g.cs
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\Substation.App.AssemblyInfoInputs.cache
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\Substation.App.AssemblyInfo.cs
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\Substation.App.dll
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\ref\Substation.App.dll
+C:\Users\LamNguyen\Source\Repos\substation-management\SubstationManagement\SubstationManagement.App\SubstationManagement.App\obj\Debug\netstandard2.0\Substation.App.pdb

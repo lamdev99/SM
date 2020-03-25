@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewmodel="clr-namespace:SubstationManagement.App.ViewModel"
+             xmlns:local="clr-namespace:SubstationManagement.App.View"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="SubstationManagement.App.View.MainTbaPage">
+    <ContentPage.BindingContext>
+        <viewmodel:TbaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="Gray">
+            <ListView x:Name="listTBA"
+                  HasUnevenRows="True"
+                      IsVisible="False"
+                  BackgroundColor="White"
+                  ItemSelected="OnItemSelected"
+                  ItemsSource="{Binding QuanLys}"
+                  CachingStrategy="RecycleElement"
+                  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=frameSearch,Factor=0,Property=Width}"
+                  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=frameSearch,Factor=1.2,Property=Height}"
+                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Factor=1,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Factor=0.5,Property=Height}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding tbaNavigation.ten}"
+                                       FontSize="Large"
+                                       TextColor="Accent"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <maps:Map MapType="Street" x:Name="map"
+              IsShowingUser="True"
+              HasZoomEnabled="True"
+              MapClicked="OnMapCliked"
+              HasScrollEnabled="True"
+              
+              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                    Property=Height,Factor=0,Constant=0}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,Property=Height,Factor=1,Constant=0}">
+                <x:Arguments>
+                    <maps:MapSpan>
+                        <x:Arguments>
+                            <maps:Position>
+                                <x:Arguments>
+                                    <x:Double>21.068528</x:Double>
+                                    <x:Double>105.780444</x:Double>
+                                </x:Arguments>
+                            </maps:Position>
+                            <x:Double>0.05</x:Double>
+                            <x:Double>0.05</x:Double>
+                        </x:Arguments>
+                    </maps:MapSpan>
+                </x:Arguments>
+            </maps:Map>
+            <Frame
+                           CornerRadius="10"
+                           BorderColor="Gray"
+                           HasShadow="True"
+                           HeightRequest="17"
+                           Margin="5,10,5,0"
+                           x:Name="frameSearch"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.05,Constant=0}"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0,Constant=0}"
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.9,Constant=0}">
+                <SearchBar
+                           x:Name="sb_search"
+                           Placeholder="Search items..."
+                           CancelButtonColor="DarkGray"
+                           PlaceholderColor="DarkGray"
+                           TextColor="DarkGray"
+                           HorizontalTextAlignment="Center"
+                           FontSize="Small"
+                           FontAttributes="Italic" 
+                           SearchButtonPressed="OnSearchButtonPressed"
+                           TextChanged="OnTextChanged"
+                           Focused="OnFocused"
+                           IsSpellCheckEnabled="False"/>
+            </Frame>
+            <Frame 
+                           x:Name="Info"
+                           CornerRadius="10"
+                           Margin="0,0,0,10"
+                           BorderColor="Blue"
+                           HeightRequest="50"
+                           HorizontalOptions="Center"
+                           BackgroundColor="White"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.8,Constant=0}"
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+                           >
+                <Grid 
+                              ColumnSpacing="6"
+                              HorizontalOptions="Center"
+                              VerticalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label HorizontalTextAlignment="Center" TextColor="#2948ff" FontSize="Medium"  Text="Tên" Grid.Row="0" Grid.Column="0" x:Name="name"/>
+                    <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="#396afc"/>
+                    <Label HorizontalTextAlignment="Center" TextColor="#2948ff" FontSize="Medium" Text="Nhiệt độ" Grid.Row="0" Grid.Column="2" x:Name="degree"/>
+                    <BoxView Grid.Row="0" Grid.Column="3" BackgroundColor="#396afc"/>
+                    <Label HorizontalTextAlignment="Center" TextColor="#2948ff" FontSize="Medium" Text="Công suất" Grid.Row="0" Grid.Column="4" x:Name="wattage"/>
+                    <BoxView Grid.Row="0" Grid.Column="5" BackgroundColor="#396afc"/>
+                    <Label HorizontalTextAlignment="Center" TextColor="#2948ff" FontSize="Medium" Text="Loại" Grid.Row="0" Grid.Column="6" x:Name="type"/>
+                </Grid>
+            </Frame>
+        </RelativeLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
